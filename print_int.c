@@ -16,8 +16,8 @@ int print_int(va_list args)
 
 	if (last < 0)
 	{
-		_putchar('_');
-		num = num;
+		_putchar('-');
+		num = -num;
 		n = -n;
 		last = -last;
 		i++;
@@ -63,8 +63,8 @@ int print_dec(va_list args)
 
 	if (last < 0)
 	{
-		_putchar('_');
-		num = num;
+		_putchar('-');
+		num = -num;
 		n = -n;
 		last = -last;
 		i++;

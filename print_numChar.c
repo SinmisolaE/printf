@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		{"%o", print_octa},
 		{"%u", print_unsigned},
 		{"%x", print_hex},
-		{"%X", print_hex_cap}
+		{"%X", print_HEX}
 	};
 
 	int b = 0;

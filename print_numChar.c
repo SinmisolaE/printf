@@ -20,7 +20,8 @@ int _printf(const char *format, ...)
 		{"%o", print_octa},
 		{"%u", print_unsigned},
 		{"%x", print_hex},
-		{"%X", print_HEX}
+		{"%X", print_HEX},
+		{"%p", print_pointer}
 	};
 
 	int b = 0;
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[b] != '\0')
 	{
-		x = 9;
+		x = 10;
 
 		while (x >= 0)
 		{

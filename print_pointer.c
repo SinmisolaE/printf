@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * print_pointer - prints pointer
@@ -14,6 +15,7 @@ int print_pointer(va_list val)
 	int i, b;
 
 	p = va_arg(val, void *);
+
 	if (p == NULL)
 	{
 		for (i = 0; s[i] != '\0'; i++)
@@ -23,6 +25,6 @@ int print_pointer(va_list val)
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = print_hex_extra(a);
+	b = print_HEX_extra(a);
 	return (b + 2);
 }

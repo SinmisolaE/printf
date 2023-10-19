@@ -21,7 +21,9 @@ int _printf(const char *format, ...)
 		{"%u", print_unsigned},
 		{"%x", print_hex},
 		{"%X", print_HEX},
-		{"%p", print_pointer}
+		{"%p", print_pointer},
+		{"%r", print_rev},
+		{"%R", print_rot}
 	};
 
 	int b = 0;
@@ -36,7 +38,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[b] != '\0')
 	{
-		x = 10;
+		x = 12;
 
 		while (x >= 0)
 		{

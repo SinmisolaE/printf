@@ -23,4 +23,6 @@ int print_HEX(va_list val);
 int print_binary(va_list val);
 int print_HEX_extra(unsigned int num);
 int print_pointer(va_list val);
+int print_rot(va_list list);
+int print_rev(va_list list);
 #endif

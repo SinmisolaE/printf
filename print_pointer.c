@@ -1,5 +1,6 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_pointer - prints pointer
@@ -11,7 +12,6 @@ int print_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
-	char *hex_buffer;
 	long int a;
 	int i, b;
 
@@ -27,16 +27,6 @@ int print_pointer(va_list val)
 	_putchar('0');
 	_putchar('x');
 
-	hex_buffer = malloc(17);
-	if (hex_buffer == NULL)
-		return (-1);
-	snprintf(hex_buffer, 17, "%0161x", a);
-
-	for (i = 0; hex_buffer[i] != '\0'; i++)
-	{
-		_putchar(hex_buffer[i]);
-	}
-	free(hex_buffer);
-	b = i;
+	b = print_hex_extra(a);
 	return (b + 2);
 }

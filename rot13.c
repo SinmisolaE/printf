@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * print_rot - prints in rot13 encryption
@@ -8,10 +9,13 @@
 int print_rot(va_list list)
 {
 	char *s = va_arg(list, char *);
-	char f[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char f[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int count = 0;
 	int i, j;
+
+	if (s == NULL)
+		s = "(nil)";
 
 	while (s[count] != '\0')
 		count++;
@@ -25,8 +29,8 @@ int print_rot(va_list list)
 				s[i] = r[j];
 				break;
 			}
-
 		}
+		_putchar(s[i]);
 	}
 	return (count);
 }
